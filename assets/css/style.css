@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+}
+/*Inicio*/
+.contenido-inicio {
+    background-color: #b6ff00;
+}
+.titulo {
+    color: #ba01ff;
+    font-size: 3.8rem;
+}
+.text-k{
+    color: #ff0092;
+}
+.imagen-inicio {
+    max-width: 100%;
+    max-height: 300px;
+    filter: drop-shadow(0px 7px 21px #ffca1b);
+    animation: girar 2s; 
+    transition: transform 0.5s ease;
+    display: block;
+}
+.imagen-inicio:hover{
+    transform: rotate(-360deg);
+}
+@keyframes girar {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+/* Ingreso */
+.instruccion {
+    font-size: 1.5rem;
+}
+.span-instruccion {
+    font-size: 1.7rem;
+}
+.btn {
+    background-color: #ba01ff;
+}
+.btn:hover{
+    background-color: #ff0092;
+    color: #000000;
+}
+/*vistas preg*/
+.test{
+    background-color: #ba01ff;
+}
+/* Mensaje Saludo*/
+.mensaje-nombre p {
+    font-size: 30px;
+    font-weight: bold;
+}
+.nombre{
+    color: #b6ff00;
+}
+/*preguntas*/
+.contenido-pregunta img{
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: 23px;
+    border-radius: 5%;
+    display: block;
+}
+/*radio Buttons*/
+.radio-contenedor label {
+    font-size: 23px;
+}
+.custom-radio {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ebebeb;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+/* Radio button cuando está marcado */
+.custom-radio:checked {
+    background-color: #ff0092;
+}
+/*Botón Enviar respuestas*/
+.btn-test .btn {
+    background-color: #b6ff00
+}
+.btn-test .btn:hover{
+    background-color: #ff0092;
+}
+#volverJugarBtn {
+    display: none;
+} 
+#msjPuntajeCuentos, #msjPuntajeAnimales {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.corona {
+    color: gold;  
+}
+.resp-correcta:checked{
+    background-color: #b6ff00;
+}
+.resp-incorrecta:checked{
+    background-color:crimson;
+}
+.respSmall{
+    font-size: 18px;
+    color: aliceblue;
+}
+
+
+@media (max-width: 380px) {
+    .titulo {
+      font-size: 2.5rem; /* O ajustá según lo necesites */
+    }
+}
