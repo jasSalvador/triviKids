@@ -26,3 +26,6 @@ Desarrollado con HTML, CSS, Bootstrap y JavaScript.
 - Las respuestas correctas se marcan en verde y las incorrectas en rojo.
 
 - Aparece un botón "Volver a jugar" que regresa a la pantalla de inicio.
+
+🔗 Ver demo en vivo:
+https://jassalvador.github.io/triviKids/index.html
