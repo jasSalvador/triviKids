@@ -28,4 +28,6 @@ Desarrollado con HTML, CSS, Bootstrap y JavaScript.
 - Aparece un botón "Volver a jugar" que regresa a la pantalla de inicio.
 
 
+🔗 Ver demo en vivo:
 https://jassalvador.github.io/triviKids/index.html
+
