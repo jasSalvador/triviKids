@@ -3,23 +3,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     const mensajeElement = document.getElementById("mensaje");
     const mensaje = sessionStorage.getItem("mensaje");
-    if (mensaje) {
-        mensajeElement.innerHTML = mensaje;
-    } else {
-        mensajeElement.textContent = "Mensaje no encontrado.";
-    }
+    if (mensajeElement) {
+        if (mensaje) {
+            mensajeElement.innerHTML = mensaje;
+        } else {
+            mensajeElement.textContent = "Mensaje no encontrado.";
+        }
+    };
 });
 
-//recuperar datos ingresados, validacion y alerta
+//recuperar datos ingresados, validacion, redirige a la trivia y muestra el mensaje
 function mostrarMensaje() {
     const nombre = document.getElementById("inputNombre").value;
     const seleccionTrivia = document.getElementById("seleccionTrivia");
     const opcionSeleccionada = seleccionTrivia.value;
-    console.log(opcionSeleccionada);
-
 
     if (nombre && opcionSeleccionada) {
-        let redireccion = "";
+        let redireccion = "";   
 
         if (opcionSeleccionada === "animales") {
             redireccion = "animales.html";
@@ -30,6 +30,7 @@ function mostrarMensaje() {
         if (redireccion) {
             const mensaje = `Hola <span class="nombre">${nombre}</span>, has ingresado a la trivia de ${opcionSeleccionada}. ¡Mucha suerte!`;
             sessionStorage.setItem("mensaje", mensaje); //guardar mensaje en sessionStorage
+            
             window.location.href = redireccion; // redirigir a la pagina trivia   
         } else {
             alert("Opción no válida. Debes seleccionar una trivia válida.");
@@ -94,10 +95,8 @@ function respuestasCuentos() {
     //ocultamos botón Responder
     document.getElementById("respCuentosBtn").style.display = "none";
 
-    //mostramos respuestas correctas y puntaje
-    //mostrar mensaje con puntaje princesas
+    //mostrar mensaje con puntaje y resp correctas princesas
     const msjPuntajeCuentos = document.getElementById("msjPuntajeCuentos");
-    // const mensajeRespuestasCuentos = `Obtuviste ${contadorCuentos} Coronas <span class="corona"> ♛</span>!`;
     const mensajeRespuestasCuentos = `Obtuviste ${contadorCuentos} Coronas <span class="corona">♛</span>!<br><span class="respSmall">Revisa tus respuestas: las correctas están en verde y las incorrectas en rojo.</span>`;
 
 
@@ -158,8 +157,7 @@ function respuestasAnimales() {
     //ocultamos botón Responder
     document.getElementById("respAnimalesBtn").style.display = "none";
 
-    //mostramos respuestas correctas y puntaje
-    //mostrar mensaje con puntaje paises
+    //mostrar mensaje con respuestas correctas y puntaje paises
     const msjPuntajeAnimales = document.getElementById("msjPuntajeAnimales");
     const mensajeRespuestasAnimales = `¡Obtuviste ${contadorAnimales} Huellas 🐾!<br><span class="respSmall">Revisa tus respuestas: las correctas están en verde y las incorrectas en rojo.</span>`;
 
@@ -167,7 +165,6 @@ function respuestasAnimales() {
 
 
     //botón para reiniciar  
-    //function reiniciarTrivia(){
     const volverJugarButton = document.getElementById("volverJugarBtn");
     volverJugarButton.style.display = "block";
     volverJugarButton.addEventListener("click", function () {

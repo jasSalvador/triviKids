@@ -21,43 +21,78 @@
     <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
     <script defer src="./assets/js/script.js"></script>
     <title>TriviKids</title>
+    <!-- acme -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Squada+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="py-2 text-center">
-        <a href="index.html" class="text-k fw-bold">TRIVI<span class="text-primary">KIDS</span></a>
+    <nav class="py-2 text-center border-bottom border-white border-3">
+        <a href="index.html" class="text-k fw-bold text-decoration-none fs-5 py-3">TRIVI<span class="text-primary">KIDS</span></a>
     </nav>
-    <section class="inicio">
-        <div class="contenido-inicio d-flex flex-column justify-content-center align-items-center mx-auto">
-            <h1 class="titulo animate__animated animate__backInDown fw-bold my-5 text-center mx-auto">Bienvenidos a Trivi<span class="text-k">K</span>ids!</h1>
-            <img src="./assets/img/img-inicio.jpg" class="imagen-inicio rounded-circle" alt="Imagen trivias">
-            <div class="text-center pt-5 container">
-                <p class="instruccion pt-2">
-                    ¡Vamos a jugar y divertirnos! Tienes 5 preguntas para demostrar todo lo que sabes,
-                    solo elige el tema que más te guste y comencemos! <span class="span-instruccion text-k fw-bold">!Buena suerte!</span>
-                </p>
-                <!--Ingreso de datos-->
-                <div class="d-flex flex-wrap justify-content-center gap-5 aling.items-center py-5 mx-auto">
-                    <div class="cont-nombre">
-                        <h5><label for="nombre">Ingresa tu nombre</label></h5>
-                        <input type="text" name="nombre" id="inputNombre" class="form-control" />
+    <section>
+        <div class="inicio">
+            <div class="inicio-titulo d-flex align-items-center p-5">
+
+                <div class="container d-flex flex-wrap justify-content-center align-items-center gap-5 px-5 mx-auto">
+                    <div class="col-lg-5 col-md-8 col-sm-10 cont-h1 animate__animated animate__backInDown">
+                        <h1 class=" fw-bold text-center px-5 mx-auto">Trivi
+                            <span class="text-k d-block">Kids!</span>
+                        </h1>
                     </div>
-                    <div class="cont-btn">
-                        <h5>¿Que trivia deseas realizar?</h5>
-                        <select class="select form-control" id="seleccionTrivia">
-                            <option value="" selected disabled>Selecciona una opcion</option>
-                            <option value="cuentos">Cuentos</option>
-                            <option value="animales">Animales</option>
-                        </select>
+                    <div class=" col-lg-4 col-md-4 col-sm-10 animate__animated animate__backInUp">
+                        <img src="./assets/img/brain.png" class="d-block w-100" alt="Cerebro">
                     </div>
                 </div>
+            </div>
+            <div class="cont-img d-flex justify-content-center align-items-center text-center px-5 mx-auto border-top border-bottom border-white border-3">
+                <img src="./assets/img/img-inicio.jpg" class="rounded-circle d-block mx-auto" alt="Imagen trivias">
+            </div>
+        </div>
 
-                <button class="btn fw-bold text-black mb-5 text-center mx-auto" id="mostrarMensajeButton">Empezar a Jugar</button>
+        <!-- info -->
+        <div class="info p-5">
+            <div class="info-box container text-center p-5">
+    
+                <div class="d-flex flex-column">
+                    <p class="instruccion px-0 px-sm-5 fs-4">
+                        ¡Vamos a jugar y divertirnos! Tienes 5 preguntas para demostrar todo lo que sabes,
+                        solo elige el tema que más te guste y comencemos! 
+                        <span class="span-instruccion text-k fw-bold text-nowrap text-sm-wrap fs-3">!Buena suerte!</span>
+                    </p>
+    
+                    <div class="d-flex flex-wrap justify-content-center gap-5 mt-5 align-items-center mx-auto">
+    
+                        <div class="col-lg-6 col-sm-10">
+                            <div class="mb-3">
+                                <h5><label for="nombre">Ingresa tu nombre</label></h5>
+                                <input type="text" name="nombre" id="inputNombre" class="form-control" />
+                            </div>
+    
+                            <div class="">
+                                <h5>Elije una trivia</h5>
+                                <select class="select form-control" id="seleccionTrivia">
+                                    <option value="" selected disabled>Selecciona una opcion</option>
+                                    <option value="cuentos">Cuentos</option>
+                                    <option value="animales">Animales</option>
+                                </select>
+                            </div>
+    
+                            <button class="btn fw-bold text-black mt-5 text-center mx-auto"
+                                id="mostrarMensajeButton">Empezar a Jugar
+                            </button>
+                        </div>
+                        <div class="col-4 px-5 text-center mx-auto">
+                            <img src="./assets/img/exclamation.png" class="d-block w-100" alt="Signo interrogación">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <footer class="footer bg-dark text-center mx-auto py-3">
-        <p class="small text-light">TriviKids&copy; - Desarrollado por Jasmin</p>
+            
+    <footer class="footer bg-dark text-center mx-auto py-4">
+        <p class="small text-light mb-0">TriviKids&copy; - Desarrollado por Jasmin</p>
     </footer>
 </body>
 </html>
